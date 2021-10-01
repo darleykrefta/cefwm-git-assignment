@@ -5,6 +5,5 @@ const addUser = ({ name, email, password }) => {
 
 const getUsers = () => {
   const users = get("users", []);
-  console.log(users);
   return users;
 };
