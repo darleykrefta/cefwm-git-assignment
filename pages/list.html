@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../css/login.css" />
+<link rel="stylesheet" type="text/css" href="../css/list.css" />
 
 <body>
   <div class="w3-top">
@@ -19,26 +20,38 @@
   </div>
   <div class="container">
     <div class="wrapper">
-
       <div id="formContent">
-        <h2> Login </h2>
-
-        <!-- Login Form -->
-        <form>
-          <div>
-            <input type="text" class="custom-input" id="email" name="email" placeholder="e-mail">
-          </div>
-          <div>
-            <input type="password" class="custom-input" id="password" name="password" placeholder="senha">
-          </div>
-          <div>
-            <button type="submit" class="custom-button">Entrar</button>
-          </div>
-          <div class="custom-div-link">
-            <a href="#">registre-se</a>
-          </div>
-        </form>
-
+        <h2>Listagem</h2>
+        <table class="greyGridTable">
+          <thead>
+            <tr>
+              <th>NOME</th>
+              <th>E-MAIL</th>
+            </tr>
+          </thead>
+          <tbody id="testBody">
+          </tbody>
+          </tr>
+        </table>
+        <script>
+          const items = [
+            { email: "jo@gmail.com", name: "João Pedro" },
+            { email: "a.sara@gmail.com", name: "Ana Sara" },
+            { email: "jo@gmail.com", name: "João Pedro" },
+            { email: "a.sara@gmail.com", name: "Ana Sara" }
+          ];
+          function loadTableData(items) {
+            const table = document.getElementById("testBody");
+            items.forEach(item => {
+              let row = table.insertRow();
+              let email = row.insertCell(0);
+              email.innerHTML = item.email;
+              let name = row.insertCell(1);
+              name.innerHTML = item.name;
+            });
+          }
+          loadTableData(items);
+        </script>
       </div>
     </div>
   </div>
