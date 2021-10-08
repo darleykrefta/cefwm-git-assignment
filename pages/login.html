@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../css/login.css" />
+<script type="text/javascript" src="../js/user-login.js"></script>
 
 <body>
     <div class="w3-top">
@@ -23,7 +24,7 @@
                 <h2> Login </h2>
 
                 <!-- Login Form -->
-                <form>
+                <form name="loginForm" onsubmit="login(event)">
                     <div>
                         <input type="text" class="custom-input" id="email" name="email" placeholder="e-mail">
                     </div>
