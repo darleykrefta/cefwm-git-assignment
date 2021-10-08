@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<title>Trabalho GIT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+<link rel="stylesheet" type="text/css" href="../css/list.css" />
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align">
+      <a href="../index.html" class="w3-bar-item w3-button w3-theme-l1">cadsis</a>
+      <a href="/pages/login.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Registrar</a>
+      <a href="/pages/list.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Listagem</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <div id="formContent">
+        <h2>Listagem</h2>
+        <table class="greyGridTable">
+          <thead>
+            <tr>
+              <th>NOME</th>
+              <th>E-MAIL</th>
+            </tr>
+          </thead>
+          <tbody id="testBody">
+          </tbody>
+          </tr>
+        </table>
+        <script>
+          const items = [
+            { email: "jo@gmail.com", name: "João Pedro" },
+            { email: "a.sara@gmail.com", name: "Ana Sara" },
+            { email: "jo@gmail.com", name: "João Pedro" },
+            { email: "a.sara@gmail.com", name: "Ana Sara" },
+            { email: "jo@gmail.com", name: "João Pedro" }
+          ];
+          function loadTableData(items) {
+            const table = document.getElementById("testBody");
+            items.forEach(item => {
+              let row = table.insertRow();
+              let email = row.insertCell(0);
+              email.innerHTML = item.email;
+              let name = row.insertCell(1);
+              name.innerHTML = item.name;
+            });
+          }
+          loadTableData(items);
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme w3-bottom w3-left-align">
+      <h5>CADSIS-UTFPR</h5>
+    </div>
+  </footer>
+</body>
+
+</html>
