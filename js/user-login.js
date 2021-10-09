@@ -9,10 +9,16 @@ const login = (event) => {
     }, {});
 
     event.preventDefault();
-    if (user?.email && user?.password)
-        setUserLogin(user)        
+    if (user?.email && user?.password && getUser(user))
+        setUserLogin(user)
 }
 
 const setUserLogin = (user) => {
     set("userLogin", user)
 }
+
+const getUserLogin = () => {
+    const userLogin = get("userLogin", {});
+
+    return userLogin?.email && userLogin?.password
+};
