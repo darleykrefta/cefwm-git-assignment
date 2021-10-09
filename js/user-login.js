@@ -22,3 +22,15 @@ const getUserLogin = () => {
 
     return userLogin?.email && userLogin?.password
 };
+
+const isUserLogin = () => {
+debugger;
+    if (getUserLogin()) {
+        document.getElementById('notUserLogin').style.visibility = "hidden";
+        document.getElementById('isUserLogin').style.visibility = "visible";
+        return;
+    }
+
+    document.getElementById('notUserLogin').style.visibility = "visible";
+    document.getElementById('isUserLogin').style.visibility = "hidden";    
+}
