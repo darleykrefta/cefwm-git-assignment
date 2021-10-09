@@ -18,7 +18,7 @@ const register = (event) => {
       throw new Error("Usuário já cadastrado!")
     }
     addUser(newUser);
-    window.location.href = "/pages/login.html";
+    window.location.href = "/pages/list.html";
   } catch (msg) {
     alert(msg || "Erro ao salvar o usuário");
   }
