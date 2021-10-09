@@ -18,7 +18,18 @@
   </div>
   <div class="container">
     <div class="wrapper">
-      <h2>Registrar</h2>
+      <div id="formContent">
+        <h2> Registrar </h2>
+        <form name="register-form" onsubmit="register(event)">
+          <input type="text" class="custom-input" id="name" name="name" placeholder="Insira seu nome" required>
+          <input type="email" class="custom-input" id="email" name="email" placeholder="Insira seu e-mail" required>
+          <input type="password" class="custom-input" id="password" name="password" placeholder="Insira sua senha" required>
+          <button type="submit" class="custom-button">Cadastrar</button>
+          <div class="custom-div-link">
+            <a href="/pages/login.html">voltar</a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <footer id="myFooter">
@@ -26,6 +37,9 @@
       <h5>CADSIS-UTFPR</h5>
     </div>
   </footer>
+  <script type="text/javascript" src="../js/utils/local-storage.js"></script>
+  <script type="text/javascript" src="../js/user-manager.js"></script>
+  <script type="text/javascript" src="../js/user-register.js"></script>
 </body>
 
 </html>
